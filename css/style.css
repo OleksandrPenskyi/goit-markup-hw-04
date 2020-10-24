@@ -155,10 +155,12 @@ h3 {
 /* ?contacts info */
 .contacts {
   margin-left: auto;
+  display: flex;
 }
 
 .contacts .link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -178,6 +180,25 @@ h3 {
 .contacts .link:focus {
   color: var(--main-blue-color);
 }
+
+.contacts .link::before {
+  display: inline-block;
+  content: '';
+
+  /* background-color: red; */
+}
+
+.contacts .link.icon-email::before {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url('../images/icons/email.svg');
+}
+
+.contacts .link.icon-email:hover::before {
+  background: var(--main-blue-color);
+}
+
 /* !CLOSED contacts info */
 /* !CLOSED header */
 
@@ -264,6 +285,38 @@ h3 {
 
 .advantages .advantages-list:not(:nth-child(4n)) {
   margin-right: 30px;
+}
+
+.advantages .advantages-list::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background: var(--bg-secondary-color);
+  margin-bottom: 30px;
+}
+
+.advantages-list.icon-nasa-link::before {
+  background-image: url('../images/icons/nasa-link.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages-list.icon-clock::before {
+  background-image: url('../images/icons/clock.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages-list.icon-diagram::before {
+  background-image: url('../images/icons/diagram.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages-list.icon-astronaut::before {
+  background-image: url('../images/icons/astronaut.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .advantages .advantages-title {
