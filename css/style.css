@@ -40,6 +40,8 @@ font-weight: 700; */
 
   --main-font-family: Roboto, sans-serif;
   --secondary-font-family: Raleway, sans-serif;
+
+  --icon-main-color: #afb1b8;
 }
 
 /* for all page  */
@@ -401,7 +403,10 @@ h3 {
 }
 
 .team-list .list-text {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
 
   color: var(--secondary-text-color);
   font-weight: 400;
@@ -411,6 +416,33 @@ h3 {
 
   text-align: center;
 }
+
+.team .social-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.team .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: var(--icon-main-color);
+}
+
+.team .social-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team .social-link:hover {
+  fill: var(--third-text-color);
+  background: var(--main-blue-color);
+  border-radius: 50%;
+}
+
 /* !CLOSED Наша команда */
 
 /* !Футер */
