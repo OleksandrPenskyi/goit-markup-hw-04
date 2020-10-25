@@ -156,6 +156,7 @@ h3 {
 .contacts {
   margin-left: auto;
   display: flex;
+  align-items: center;
 }
 
 .contacts .link {
@@ -170,33 +171,24 @@ h3 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  /* для заполнeния svg */
+  fill: var(--secondary-text-color);
 }
 
 .contacts .link:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--main-blue-color);
+  fill: var(--main-blue-color);
 }
 
-.contacts .link::before {
-  display: inline-block;
-  content: '';
-
-  /* background-color: red; */
-}
-
-.contacts .link.icon-email::before {
-  width: 16px;
-  height: 12px;
+/* Оформляем svg */
+.contacts-icon {
   margin-right: 10px;
-  background-image: url('../images/icons/email.svg');
-}
-
-.contacts .link.icon-email:hover::before {
-  background: var(--main-blue-color);
 }
 
 /* !CLOSED contacts info */
@@ -205,10 +197,6 @@ h3 {
 /* !main part */
 /* !hero */
 .hero {
-  /* padding-top: 200px;
-  padding-bottom: 200px; */
-
-  /* background: var(--bg-main-color); */
   text-align: center;
 }
 
@@ -220,11 +208,7 @@ h3 {
   padding-top: 200px;
 
   background-color: var(--bg-main-color);
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/main-bg.jpg');
   background-position: center;
 }
