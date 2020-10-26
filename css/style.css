@@ -33,6 +33,8 @@ font-weight: 700; */
 
   --bg-main-color: #2f303a;
   --bg-secondary-color: #f5f4fa;
+  --bg-third-color: #ffffff;
+  --bg-forth-color: #e5e5e5;
   --bg-card-color: #ffffff;
 
   --border-main-color: #eeeeee;
@@ -81,6 +83,7 @@ h3 {
 /* Flex items for header */
 .header {
   border-bottom: 1px solid var(--border-header-color);
+  background: var(--bg-third-color);
 }
 
 .nav-flex {
@@ -377,6 +380,8 @@ h3 {
   padding-bottom: 30px;
   background: var(--bg-card-color);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-list .list-item:not(:nth-child(4n)) {
@@ -445,6 +450,53 @@ h3 {
 
 /* !CLOSED Наша команда */
 
+/* !Постоянные клиенты */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients .title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.clients .clients-block {
+  display: flex;
+}
+
+.clients-block .clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: calc((100% - 150px) / 6);
+  height: 90px;
+  border: 1px solid var(--icon-main-color);
+  border-radius: 4px;
+  fill: var(--icon-main-color);
+}
+
+.clients-block .clients-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-block .clients-link:hover,
+.clients-block .clients-link:focus {
+  border-color: var(--main-blue-color);
+  fill: var(--main-blue-color);
+}
+
+/* !CLOSED Постоянные клиенты */
+
 /* !Футер */
 .footer {
   padding-top: 60px;
@@ -479,6 +531,61 @@ h3 {
 
 .company-address .link {
   margin-top: 9px;
+}
+
+/* Делаем SVG для блока футера */
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address-block {
+  margin-right: 70px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-social .title {
+  margin-bottom: 20px;
+
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
+
+.footer-social .social-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.footer-social .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--bg-card-color);
+}
+
+.footer-social .social-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
+  background: var(--main-blue-color);
 }
 
 /* !CLOSED Футер */
@@ -554,6 +661,11 @@ h3 {
 /* маржин ботом для всех элементов списка, кроме 3-х последних элементов списка*/
 .examples .examples-list:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.examples .examples-list:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .examples-link {
